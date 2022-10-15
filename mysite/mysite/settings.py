@@ -12,7 +12,9 @@ https://docs.djangoproject.com/en/1.8/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
+import pymysql
 from decouple import config
+
 SECRET_KEY = config('SECRET_KEY')
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -75,13 +77,25 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
 
+DATABASES = {  
+    'default': {  
+        'ENGINE': 'django.db.backends.mysql',  
+        'NAME': 'ConcertData',  
+        'USER': 'root',  
+        'PASSWORD': config('PASSWORD'),  
+        'HOST': '127.0.0.1',  
+        'PORT': '3306',  
+        }  
+    }  
+pymysql.version_info = (1, 4, 2, "окончательный", 0)
+pymysql.install_as_MySQLdb()
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.8/topics/i18n/

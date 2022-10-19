@@ -1,19 +1,19 @@
 body {
-    background: #38444c;
+    background: #e9eef4;
 }
 
 main .mainPage {
-    background-color:#d9831f;
-    border: #222529 10px;
-    border: solid #222529 5px;
+    background-color:#994ce6;
+    border: solid #994ce6 5px;
     border-radius: 10px;
     font-size: 25px;
-    height: 170px;
-    width: 1300px;
+    height: 770px;
+    width: 1400px;
+    margin-top: 10px;
     margin-left: auto;
     margin-right: auto;
-    color: #222529;
-    margin-top: 20%;
+    color: #e9eef4;
+    
     text-align: center;
 }
 
@@ -26,4 +26,5 @@ main .mainPage h1{
     margin-left: auto;
     margin-right: auto;
     border-radius: 10px;
+    margin-top: 20%;
 }

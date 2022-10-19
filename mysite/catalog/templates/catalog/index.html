@@ -1,0 +1,16 @@
+{% extends 'catalog/layout.html' %}
+{% load static %}
+
+{% block title%} Главная Страница {% endblock %}
+
+{% block content%}
+<div class = "mainPage">
+    
+    <h1>
+        <img src = "{% static 'catalog/img/volume-up dark.svg'%}" alt="Логотип" width="75px" fill = #fff>
+        EasyConcert
+    </h1>
+    <div class = "mainInfo"> Мульти функциональный сервис позволяющий отслеживать и анализировать продажи.
+    </div>
+</div>
+{% endblock %}
